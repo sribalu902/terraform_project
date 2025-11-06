@@ -75,7 +75,7 @@ resource "aws_security_group" "webSg" {
 resource "aws_instance" "server" {
   ami                    = "ami-0261755bbcb8c4a84"
   instance_type          = "t2.micro"
-  key_name      = balu.pem
+  key_name      = "balu.pem"
   vpc_security_group_ids = [aws_security_group.webSg.id]
   subnet_id              = aws_subnet.sub1.id
 
